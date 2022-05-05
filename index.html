@@ -18,7 +18,7 @@
             <nav class="navbar navbar-expand-lg navbar-light  ">
                 <div class="container-fluid">
                   
-                  <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <button id="navbar-toggler-btn" class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -217,6 +217,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const btn = document.querySelector("#navbar-toggler-btn");
+        const target = document.querySelector("#navbarSupportedContent")
+        
+        btn.onClick = function () {
+                if (target.classList.contains("show")) {
+                    target.classList.remove("show")
+                } else {
+                    target.classList.add("show")
+                }
+        }
+    </script>
 
 
 
